@@ -37,11 +37,11 @@ void loop(){
 
 
 
-    tm1637.display(datos);
     datos[0] = DHT11.humidity / 10;
     datos[1] = DHT11.humidity % 10;
     datos[2] = DHT11.temperature / 10;
     datos[3] = DHT11.temperature % 10;
+    tm1637.display(datos);
 
     Serial.print("Humedad (%): ");
     Serial.println(DHT11.humidity);

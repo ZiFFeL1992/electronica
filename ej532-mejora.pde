@@ -39,18 +39,24 @@ void loop(){
         Serial.print("distancia>40: ");
         Serial.println(distancia);
         digitalWrite(pinTwo, HIGH);
-    } else if (30<distancia && distancia<40){
+    } else if (30<distancia && distancia<=40){
         Serial.print("30<distancia<40: ");
         Serial.println(distancia);
         digitalWrite(pinThree, HIGH);
-    } else if (20<distancia && distancia<30){
+        digitalWrite(pinTwo, HIGH);
+    } else if (20<distancia && distancia<=30){
         Serial.print("20<distancia<30: ");
         Serial.println(distancia);
         digitalWrite(pinFour, HIGH);
-    } else if (distancia<20){
+        digitalWrite(pinThree, HIGH);
+        digitalWrite(pinTwo, HIGH);
+    } else if (distancia<=20){
         Serial.print("distancia<20: ");
         Serial.println(distancia);
         digitalWrite(pinFive, HIGH);
+        digitalWrite(pinFour, HIGH);
+        digitalWrite(pinThree, HIGH);
+        digitalWrite(pinTwo, HIGH);
     }
 
     delay(50);
